@@ -85,6 +85,12 @@ img {
 
 #img-div {
   grid-area: image;
+  display: flex;
+  flex-direction: column;
+}
+
+.podpis {
+  align-self: center;
 }
 
 #tribute-content {
@@ -117,3 +123,43 @@ img {
 #part3 {
   grid-area: par3;
 }
+
+@media only screen
+  and (min-device-width: 300px)
+  and (max-device-width: 1024px) {
+   #main {
+     grid-template-columns: 1fr;
+     grid-template-rows: 5, auto;
+     grid-template-areas:
+       "head"
+       "image"
+       "content"
+       "citation"
+       "footer";
+   }
+
+   #title {
+     margin: 0;
+   }
+
+   #tribute-content {
+     grid-template-columns: 1fr;
+     grid-template-rows: 3, auto;
+     grid-template-areas:
+       "par1"
+       "par2"
+       "par3"
+   }
+
+   table {
+     font-size: 1em;
+   }
+
+   ul {
+     margin: 2em;
+   }
+
+   .podpis {
+     font-size: 1em;
+   }
+ }
