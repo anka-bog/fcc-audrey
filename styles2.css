@@ -1,0 +1,153 @@
+/* ===== FONTS ===== */
+@import url(http://fonts.googleapis.com/css?family=Abel|Libre+Baskerville|Poiret+One);
+
+/* ===== BASE STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: #b2b2b2;
+}
+header {
+  align-items: center;
+  justify-content: center;
+}
+main {
+  align-items: flex-start;
+}
+header,
+main {
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+h1 {
+  color: #434343;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2em;
+  margin: 0.5em;
+}
+h2,
+a {
+  color:#747170;
+  font-style: italic;
+}
+h2 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+/* ===== main ====== */
+img {
+  max-width: 90vw;
+  height: auto;
+  border: 1px solid #434343;
+  border-radius: .5em;
+}
+h4{
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+h4,
+ul,
+p {
+    font-family: 'Abel', sans-serif;
+}
+ul {
+  margin: .5em;
+  padding: .5em;
+  list-style-type: none;
+}
+li {
+  padding: .1em;
+}
+.image {
+  align-self: center;
+}
+.citation {
+  padding: 1em 1em 0;
+}
+
+/* ===== MEDIA QUERIES ====== */
+@media (min-width: 601px) {
+  .tribute:first-child {
+    margin: 2em;
+  }
+  .tribute,
+  .tribute-films {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+@media (min-width: 769px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  img {
+    width: 45vw;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 40vh;
+  }
+  li {
+    display: inline-block;
+    max-width: 30%;
+    padding-right: 1em;
+  }
+  .citation,
+  .image {
+    order: -1;
+  }
+  .image {
+    margin-left: 1.5em;
+  }
+  .citation {
+    align-self: center;
+    max-width: 45vw;
+  }
+  .tribute-films li{
+    padding-right: 2em;
+    width: 50vw;
+  }
+
+
+@media (min-width: 1025px) {
+  main {
+    justify-content: flex-start;
+  }
+  img {
+    width: 30vw;
+  }
+
+  ul {
+    max-height: 100vh;
+  }
+  li {
+    padding-right: .5em;
+  }
+  .image,
+  .ciation {
+    max-width: none;
+  }
+  .citation {
+    order: 1;
+  }
+}
+
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
