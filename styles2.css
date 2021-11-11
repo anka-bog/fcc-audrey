@@ -88,66 +88,51 @@ li {
   main {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   img {
-    width: 45vw;
+    max-width: 350px;
   }
-  ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 40vh;
-  }
-  li {
-    display: inline-block;
-    max-width: 30%;
-    padding-right: 1em;
-  }
-  .citation,
   .image {
+    order: -2;
+  }
+  .citation {
     order: -1;
-  }
-  .image {
-    margin-left: 1.5em;
-  }
-  .citation {
-    align-self: center;
     max-width: 45vw;
+    align-self: center;
   }
-  .tribute-films li{
-    padding-right: 2em;
-    width: 50vw;
+  .tribute,
+  .tribute-films {
+    margin-left: 0;
+    margin-right: 0;
   }
-
-
+  .tribute {
+    max-width: 30%;
+  }
+}
 @media (min-width: 1025px) {
-  main {
-    justify-content: flex-start;
+  h1 {
+    font-size: 3em;
   }
-  img {
-    width: 30vw;
-  }
-
-  ul {
-    max-height: 100vh;
-  }
-  li {
-    padding-right: .5em;
-  }
-  .image,
-  .ciation {
-    max-width: none;
-  }
-  .citation {
-    order: 1;
+  h2 {
+    font-size: 1.7em;
   }
 }
 
 @media (min-width: 1441px) {
-  h1 {
-    font-size: 3.5em;
+  main {
+    gap: 1em;
   }
-  h2 {
-    font-size: 2em;
+  img {
+    max-width: 50vw;
+  }
+  .image {
+    align-self: flex-start;
+  }
+  .tribute {
+    max-width: 20%;
+  }
+  .citation {
+    order: 0;
   }
 }
